@@ -20,6 +20,9 @@ namespace password_manager
         public Form1()
         {
             InitializeComponent();
+            //make the password shown as * to prevent over the shoulder spoofing
+            textBox1.MaxLength = 32;
+            textBox1.PasswordChar = '*';
         }
 
         private void Form1_Load(object sender, EventArgs e)
